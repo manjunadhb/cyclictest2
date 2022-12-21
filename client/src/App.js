@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>This is testing app</h1>
+      <h1>This is testing app {process.env.port}</h1>
       <button
         onClick={() => {
           getMoviesFromServer();
