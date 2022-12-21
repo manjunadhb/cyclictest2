@@ -7,7 +7,7 @@ function App() {
     axios.defaults.baseURL = `http://localhost:${PORT}`;
   }, []);
 
-  let PORT = process.env.PORT || 5000;
+  let PORT = process.env.port || 5000;
   let [moviesList, setMoviesList] = useState([]);
   let getMoviesFromServer = async () => {
     let response = await axios.get("/moviesList");
