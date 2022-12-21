@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    axios.defaults.baseURL = `http://localhost:${PORT}`;
+    // axios.defaults.baseURL = `http://localhost:${PORT}`;
   }, []);
 
   let PORT = process.env.port || 5000;
