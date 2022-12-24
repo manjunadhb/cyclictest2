@@ -7,10 +7,10 @@ function App() {
     // axios.defaults.baseURL = `http://localhost:${PORT}`;
   }, []);
 
-  let PORT = process.env.port || 5000;
+  let PORT = process.env.PORT || 5000;
   let [moviesList, setMoviesList] = useState([]);
   let getMoviesFromServer = async () => {
-    let response = await axios.get("/moviesList");
+    let response = await axios.get("http://localhost:5000/moviesList");
 
     setMoviesList(response.data);
     console.log(response);
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>This is testing app {process.env.port}</h1>
+      <h1>This is testing app {process.env.PORT}</h1>
       <button
         onClick={() => {
           getMoviesFromServer();
