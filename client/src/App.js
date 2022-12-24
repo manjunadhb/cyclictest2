@@ -10,7 +10,9 @@ function App() {
   let PORT = process.env.PORT || 5000;
   let [moviesList, setMoviesList] = useState([]);
   let getMoviesFromServer = async () => {
-    let response = await axios.get("http://localhost:5000/moviesList");
+    let response = await axios.get(
+      "https://fair-puce-caridea-belt.cyclic.app/moviesList"
+    );
 
     setMoviesList(response.data);
     console.log(response);
